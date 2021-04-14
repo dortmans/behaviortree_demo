@@ -1,0 +1,42 @@
+<root main_tree_to_execute="BehaviorTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="BehaviorTree">
+        <Sequence>
+            <SubTree ID="Init"/>
+            <RetryUntilSuccesful num_attempts="-1">
+                <Fallback name="Pursue Goals">
+                    <ForceFailure name="No Item to Place">
+                        <Sequence name="Place Item">
+                            <Condition ID="HoldingItem" name="Holding an Item"/>
+                            <Action ID="Place" name="Place it"/>
+                        </Sequence>
+                    </ForceFailure>
+                    <ForceFailure name="No Item to Pick">
+                        <Sequence name="Remove Item">
+                            <Condition ID="SeeItem" name="See an Item"/>
+                            <Action ID="Pick" name="Pick it up"/>
+                        </Sequence>
+                    </ForceFailure>
+                </Fallback>
+            </RetryUntilSuccesful>
+        </Sequence>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <BehaviorTree ID="Init">
+        <Action message="Initialize" ID="Print"/>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="AlwaysRunning"/>
+        <Condition ID="HoldingItem"/>
+        <SubTree ID="Init"/>
+        <Action ID="Pick"/>
+        <Action ID="Place"/>
+        <Action ID="Print">
+            <input_port name="message"/>
+        </Action>
+        <Condition ID="SeeItem"/>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>
+

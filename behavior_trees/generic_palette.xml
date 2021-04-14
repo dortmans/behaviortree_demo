@@ -1,0 +1,22 @@
+<root>
+    <TreeNodesModel>
+        <Action ID="AlwaysRunning"/>
+        <Condition ID="ConditionCheck">
+            <input_port name="topic"/>
+        </Condition>
+        <Condition ID="MessageCheck">
+            <input_port name="topic"/>
+        </Condition>
+        <Action ID="Print">
+            <input_port type="std::string" name="message"/>
+        </Action>
+        <Action ID="Trigger">
+            <input_port type="std::string" name="service_name">name of the ROS service</input_port>
+            <input_port type="unsigned int" name="timeout">timeout to connect to server (milliseconds)</input_port>
+        </Action>
+        <Action ID="Wait">
+            <input_port name="duration">Waiting for duration (ms)</input_port>
+        </Action>
+    </TreeNodesModel>
+</root>
+

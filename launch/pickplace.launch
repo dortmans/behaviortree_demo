@@ -1,0 +1,11 @@
+<launch>
+
+	<arg name="bt" default="pickplace.xml" />
+	<arg name="log" default="false" />
+	
+	<node pkg="behaviortree_demo" type="pickplace" name="pickplace" output="screen">
+		<param name="bt_xml_filename" value="$(find behaviortree_demo)/behavior_trees/$(arg bt)"/>
+		<param name="log" value="$(arg log)" />
+	</node>
+	
+</launch>

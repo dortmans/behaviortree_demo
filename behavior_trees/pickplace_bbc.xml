@@ -1,0 +1,35 @@
+<root main_tree_to_execute="BehaviorTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="BehaviorTree">
+        <Repeat num_cycles="-1">
+            <Fallback name="Pursue Goals">
+                <Sequence name="Place Item">
+                    <Condition ID="HoldingItem" name="Holding an Item"/>
+                    <Action ID="Place" name="Place it"/>
+                </Sequence>
+                <Sequence name="Remove Item">
+                    <Condition ID="SeeItem" name="See an Item"/>
+                    <Action ID="Pick" name="Pick it up"/>
+                </Sequence>
+            </Fallback>
+        </Repeat>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <BehaviorTree ID="Init">
+        <Action ID="Print" message="Initialize"/>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="AlwaysRunning"/>
+        <Condition ID="HoldingItem"/>
+        <SubTree ID="Init"/>
+        <Action ID="Pick"/>
+        <Action ID="Place"/>
+        <Action ID="Print">
+            <input_port name="message"/>
+        </Action>
+        <Condition ID="SeeItem"/>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>
+

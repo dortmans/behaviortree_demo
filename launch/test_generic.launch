@@ -1,0 +1,12 @@
+<launch>
+
+	<arg name="bt" default="generic.xml" />
+	<arg name="log" default="false" />
+	
+	<node pkg="behaviortree_demo" type="test_generic" name="behaviortree" output="screen" required="true">
+		<param name="bt_xml_filename" value="$(find behaviortree_demo)/behavior_trees/$(arg bt)"/>
+		<!--<param name="xml_text" textfile="$(find behaviortree_demo)/behavior_trees/$(arg bt)" />-->
+		<param name="log" value="$(arg log)" />
+	</node>
+	
+</launch>

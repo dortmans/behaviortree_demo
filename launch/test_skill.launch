@@ -1,0 +1,5 @@
+<launch>
+
+	<node pkg="behaviortree_demo" type="skill.py" name="test_skill" output="screen" required="true" />
+	
+</launch>

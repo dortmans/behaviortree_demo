@@ -1,0 +1,12 @@
+#GOAL
+# optional inputs
+string[] input_keys
+string[] input_values
+---
+#RESULT
+bool success
+# optional outputs
+string[] output_keys
+string[] output_values
+---
+#FEEDBACK

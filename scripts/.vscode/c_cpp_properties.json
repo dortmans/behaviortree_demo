@@ -1,0 +1,49 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/eric/catkin_ws/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/eric/catkin_ws/src/ball_detection/include/**",
+        "/home/eric/catkin_ws/src/behaviortree_cpp_v3/include/**",
+        "/home/eric/catkin_ws/src/behaviortree_demo/include/**",
+        "/home/eric/catkin_ws/src/behaviortree_ros/include/**",
+        "/home/eric/catkin_ws/src/behaviortree_ros_test/include/**",
+        "/home/eric/catkin_ws/src/fake_localization_test/include/**",
+        "/home/eric/catkin_ws/src/gazebo-pkgs/gazebo_grasp_plugin/include/**",
+        "/home/eric/catkin_ws/src/gazebo_model_velocity_plugin/include/**",
+        "/home/eric/catkin_ws/src/gazebo_ros_2Dmap_plugin/include/**",
+        "/home/eric/catkin_ws/src/gazebo-pkgs/gazebo_state_plugins/include/**",
+        "/home/eric/catkin_ws/src/gazebo-pkgs/gazebo_test_tools/include/**",
+        "/home/eric/catkin_ws/src/gazebo-pkgs/gazebo_version_helpers/include/**",
+        "/home/eric/catkin_ws/src/gazebo-pkgs/gazebo_world_plugin_loader/include/**",
+        "/home/eric/catkin_ws/src/goal_detection/include/**",
+        "/home/eric/catkin_ws/src/hector_gazebo/hector_gazebo_plugins/include/**",
+        "/home/eric/catkin_ws/src/hector_gazebo/hector_gazebo_thermal_camera/include/**",
+        "/home/eric/catkin_ws/src/human_model/include/**",
+        "/home/eric/catkin_ws/src/joint_state_mapper/include/**",
+        "/home/eric/catkin_ws/src/naoqi_dcm_driver/include/**",
+        "/home/eric/catkin_ws/src/naoqi_driver/include/**",
+        "/home/eric/catkin_ws/src/general-message-pkgs/object_msgs_tools/include/**",
+        "/home/eric/catkin_ws/src/pepper_navigation/include/**",
+        "/home/eric/catkin_ws/src/pepper_teleop/include/**",
+        "/home/eric/catkin_ws/src/ridgeback/ridgeback_control/include/**",
+        "/home/eric/catkin_ws/src/rifraf_ros/include/**",
+        "/home/eric/catkin_ws/src/rl_gazebo/include/**",
+        "/home/eric/catkin_ws/src/ros_bag/include/**",
+        "/home/eric/catkin_ws/src/ros_cam/include/**",
+        "/home/eric/catkin_ws/src/ros_multicam/include/**",
+        "/home/eric/catkin_ws/src/simple_models_robot/simple_models_gazebo/include/**",
+        "/home/eric/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/eric/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/eric/catkin_ws/src/video_stream/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<root main_tree_to_execute="BehaviorTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="BehaviorTree">
+        <ReactiveSequence name="Pursue Goals">
+            <Fallback name="No Item in gripper">
+                <Inverter name="Not">
+                    <Condition ID="HoldingItem" name="Holding an Item"/>
+                </Inverter>
+                <Action ID="Place" name="Place it"/>
+            </Fallback>
+            <Fallback name="No Item to pick">
+                <Inverter name="Not">
+                    <Condition ID="SeeItem" name="See an Item"/>
+                </Inverter>
+                <Action ID="Pick" name="Pick it up"/>
+            </Fallback>
+            <Action ID="AlwaysRunning" name="Keep Running"/>
+        </ReactiveSequence>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <BehaviorTree ID="Init">
+        <Action ID="Print" message="Initialize"/>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="AlwaysRunning"/>
+        <Action ID="GetItemPose"/>
+        <Condition ID="HoldingItem"/>
+        <SubTree ID="Init"/>
+        <Action ID="Pick"/>
+        <Action ID="Place"/>
+        <Action ID="Print">
+            <input_port name="message"/>
+        </Action>
+        <Condition ID="SeeItem"/>
+        <Action ID="Trigger">
+            <input_port name="service_name"/>
+        </Action>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>
+

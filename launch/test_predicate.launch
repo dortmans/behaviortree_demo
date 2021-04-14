@@ -1,0 +1,5 @@
+<launch>
+
+	<node pkg="behaviortree_demo" type="predicate.py" name="test_predicate" output="screen" required="true" />
+	
+</launch>
